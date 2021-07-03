@@ -3,14 +3,15 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static final double horaAula = 17.50;
+//	public static final double horaAula = 17.50;
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
-		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos, horaAula;
 		
 		Random gerador = new Random();
 		
 		Scanner leitor = new Scanner(System.in);
+		
 		
 		while(opcao!=4) {
 			System.out.println("FERRAMENTA DE AUXÍLIO AO PROFESSOR!");
@@ -25,6 +26,10 @@ public class TeacherHelper {
 				/*O salário dos professores de escolas particulares em
 				 * São Paulo é composto da seguinte forma 
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
+				
+				System.out.println("Por favor, informe o valor da hora-aula praticado na instituição.");
+				horaAula = leitor.nextDouble();
+				
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
 				numeroAulas = leitor.nextInt();
 				salarioBase = numeroAulas * 4.5 * horaAula;
